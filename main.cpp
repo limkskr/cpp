@@ -1,71 +1,58 @@
 #include <iostream>
 #include <stdlib.h>
-#include "ArrayList.h"
-#include "Point.h"
+#include "DLinkedList.h"
+
+int Comp(int a, int b)
+{
+    if(a<b)
+        return 0;
+    else
+        return 1;
+}
 int main()
-{    
+{
     List list;
-    Point compos;
-    Point * ppos;
-
+    int data;
     ListInit(&list);
+    SetSortRule(&list, Comp);
 
-    ppos = (Point*)malloc(sizeof(Point));
-    SetPointPos(ppos, 2, 1);
-    LInsert(&list, ppos);
+    LInsert(&list, 11); LInsert(&list, 11);
+    LInsert(&list, 22); LInsert(&list, 22);
+    LInsert(&list, 33);
 
-    ppos = (Point*)malloc(sizeof(Point));
-    SetPointPos(ppos, 2, 2);
-    LInsert(&list, ppos);
+    printf("현재 데이터수: %d \n", LCount(&list));
 
-    ppos = (Point*)malloc(sizeof(Point));
-    SetPointPos(ppos, 3, 1);
-    LInsert(&list, ppos);
-
-    ppos = (Point*)malloc(sizeof(Point));
-    SetPointPos(ppos, 3, 2);
-    LInsert(&list, ppos);
-
-    printf("현재 데이터 수: %d \n", LCount(&list));
-
-    if(LFirst(&list, &ppos))
+    if(LFirst(&list, &data))
     {
-        ShowPointPos(ppos);
+        printf("%d ", data);
 
-        while(LNext(&list, &ppos))
-                ShowPointPos(ppos);
+        while(LNext(&list, &data))
+            printf("%d ", data);
     }
-    printf("\n");
+    printf("\n\n");
 
-    compos.xpos = 2;
-    compos.ypos = 0;
-
-
-    if(LFirst(&list, &ppos))
+    if(LFirst(&list, &data))
     {
-        if(PointComp(ppos, &compos)==1)
+        if(data == 22)
+            LRemove(&list);
+
+        while(LNext(&list, &data))
         {
-            ppos=LRemove(&list);
-            free(ppos);
-        }
-        while(LNext(&list, &ppos))
-        {
-            if(PointComp(ppos, &compos)==1)
-            {
-                ppos=LRemove(&list);
-                free(ppos);
-            }
+            if(data == 22)
+                LRemove(&list);
         }
     }
-    printf("현재 데이터 수: %d \n", LCount(&list));
 
-    if(LFirst(&list, &ppos))
+    printf("현재 데이터수: %d \n", LCount(&list));
+
+    if(LFirst(&list, &data))
     {
-        ShowPointPos(ppos);
+        printf("%d ", data);
 
-        while(LNext(&list, &ppos))
-                ShowPointPos(ppos);
+        while(LNext(&list, &data))
+            printf("%d ", data);
     }
-    printf("\n");
-    return 0;
+    printf("\n\n");
+
+
 }
