@@ -1,6 +1,7 @@
 #include "DLinkedList.h"
 #include <iostream>
 
+// 리스트 초기화
 void ListInit(List*plist)
 {
     plist -> head = (Node*)malloc(sizeof(Node));
@@ -9,6 +10,7 @@ void ListInit(List*plist)
     plist -> comp = NULL;
 }
 
+// 정렬기준 = NULL 이면 데이터 삽입
 void FInsert(List*plist, LData pdata)
 {
     Node * newNode = (Node*)malloc(sizeof(Node));
@@ -20,6 +22,8 @@ void FInsert(List*plist, LData pdata)
     (plist -> numOfData)++;
 }
 
+
+// 
 void SInsert(List*plist, LData pdata)
 {
     Node * newNode = (Node*)malloc(sizeof(Node));
