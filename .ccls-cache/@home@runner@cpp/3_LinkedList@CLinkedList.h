@@ -1,5 +1,5 @@
-#ifndef __C_LINKED_LIST__
-#define __C_LINKED_LIST__
+#ifndef __C_LINKED_LIST_H__
+#define __C_LINKED_LIST_H__
 
 #define TRUE    1
 #define FALSE    0
