@@ -1,18 +1,20 @@
 #include "ListBaseStack.h"
+#include "InfixToPostfix.h"
 #include <iostream>
 
 int main(void)
 {
-    Stack stack;
-    StackInit(&stack);
+    char exp1[] = "1+2*3";
+    char exp2[] = "(1+2)*3";
+    char exp3[] = "((1-2)+3)*(5-2)";
 
-    SPush(&stack, 1); SPush(&stack, 2);
-    SPush(&stack, 3); SPush(&stack, 4);
-    SPush(&stack, 5);
+    ConvToRPNExp(exp1);
+    ConvToRPNExp(exp2);
+    ConvToRPNExp(exp3);
 
-    while(!SIsEmpty(&stack))
-    {
-        printf("%d ", SPop(&stack));
-    }
+    printf("%s \n", exp1);
+    printf("%s \n", exp2);
+    printf("%s \n", exp3);
+    
     return 0;
 }
