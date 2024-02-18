@@ -13,7 +13,7 @@
 #define BUL_TERM    15
 #define DUB_TERM    24
 
-int main1(void)
+int main1()
 {
     int makeProc=0;
     int cheOrder=0, bulOrder=0, dubOrder=0;
@@ -58,4 +58,5 @@ int main1(void)
     printf(" - Double berger: %d \n", dubOrder);
     printf(" - Waiting room size: %d", QueLen);
 
+    return 0;
 }
