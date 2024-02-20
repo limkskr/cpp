@@ -1,34 +1,21 @@
 #include <iostream>
-#include "Deque.h"
-
+#include "BinaryTree.h"
 int main(void)
 {
-    Deque deq;
-    DequeInit(&deq);
+    BTNode * bt1 = MakeBTreeNode();
+    BTNode * bt2 = MakeBTreeNode();
+    BTNode * bt3 = MakeBTreeNode();
+    BTNode * bt4 = MakeBTreeNode();
 
-    DQAddFirst(&deq, 3);
-    DQAddFirst(&deq, 2);
-    DQAddFirst(&deq, 1);
+    SetData(bt1, 1);
+    SetData(bt2, 2);
+    SetData(bt3, 3);
+    SetData(bt4, 4);
 
-    DQAddLast(&deq, 4);
-    DQAddLast(&deq, 5);
-    DQAddLast(&deq, 6);
+    MakeLeftSubTree(bt1, bt2);
+    MakeRightSubTree(bt1, bt3);
+    MakeLeftSubTree(bt2, bt4);
 
-    while(!DQIsEmpty(&deq))
-        printf("%d ", DQRemoveFirst(&deq));
-
-    printf("\n");
-
-    DQAddFirst(&deq, 3);
-    DQAddFirst(&deq, 2);
-    DQAddFirst(&deq, 1);
-
-    DQAddLast(&deq, 4);
-    DQAddLast(&deq, 5);
-    DQAddLast(&deq, 6);
-
-    while(!DQIsEmpty(&deq))
-        printf("%d ", DQRemoveLast(&deq));
-
+    InorderTraverse(bt1);
     return 0;
 }
