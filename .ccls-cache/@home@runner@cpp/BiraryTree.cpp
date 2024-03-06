@@ -73,7 +73,7 @@ void PostorderTraverse(BTNode*bt, VisitFuncPtr action)
     action(bt->data);
 }
 
-void DeleteTree(BTNode*bt);
+void DeleteTree(BTNode*bt)
 {
     if(bt == NULL)
         return;
@@ -81,5 +81,5 @@ void DeleteTree(BTNode*bt);
     DeleteTree(bt->left);
     DeleteTree(bt->right);
     printf("Delete Node Data: %d", bt->data);
-    free(bt)
+    free(bt);
 }

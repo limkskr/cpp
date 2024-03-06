@@ -1,21 +1,23 @@
 #include <iostream>
-#include "BinaryTree.h"
+#include "UsefulHeap.h"
+#include <string.h>
+
+int DataPriorityComp(char * str1, char * str2)    //우선순위 비교함수
+{
+    return strlen(str1) - strlen(str2);
+}
+
 int main(void)
 {
-    BTNode * bt1 = MakeBTreeNode();
-    BTNode * bt2 = MakeBTreeNode();
-    BTNode * bt3 = MakeBTreeNode();
-    BTNode * bt4 = MakeBTreeNode();
+    Heap heap;
+    HeapInit(&heap, DataPriorityComp);
 
-    SetData(bt1, 1);
-    SetData(bt2, 2);
-    SetData(bt3, 3);
-    SetData(bt4, 4);
+    HInsert(&heap, "Good morning");
+    HInsert(&heap, "I am a boy");
+    HInsert(&heap, "Priority Queue");
 
-    MakeLeftSubTree(bt1, bt2);
-    MakeRightSubTree(bt1, bt3);
-    MakeLeftSubTree(bt2, bt4);
+    while(!HIsEmpty(&heap))
+        printf("%s \n", HDelete(&heap));
 
-    InorderTraverse(bt1);
     return 0;
 }

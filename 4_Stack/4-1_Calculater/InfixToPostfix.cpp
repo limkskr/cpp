@@ -1,4 +1,4 @@
-#include "InfixToPostfix.h"
+/*#include "InfixToPostfix.h"
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
@@ -88,4 +88,4 @@ void ConvToRPNExp(char exp[])
 
     strcpy(exp, convExp);
     free(convExp);
-}
+}*/

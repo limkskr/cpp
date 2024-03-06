@@ -59,21 +59,23 @@ void PreorderTraverse(BTNode*bt, VisitFuncPtr action)
 {
     if(bt == NULL)
         return;
+    
     action(bt->data);
-    InorderTraverse(bt->left, action);
-    InorderTraverse(bt->right, action);
+    PreorderTraverse(bt->left, action);
+    PreorderTraverse(bt->right, action);
 }
 
 void PostorderTraverse(BTNode*bt, VisitFuncPtr action)
 {
     if(bt == NULL)
         return;
-    InorderTraverse(bt->left, action);
-    InorderTraverse(bt->right, action);
+    
+    PostorderTraverse(bt->left, action);
+    PostorderTraverse(bt->right, action);
     action(bt->data);
 }
 
-void DeleteTree(BTNode*bt);
+void DeleteTree(BTNode*bt)
 {
     if(bt == NULL)
         return;
@@ -81,5 +83,5 @@ void DeleteTree(BTNode*bt);
     DeleteTree(bt->left);
     DeleteTree(bt->right);
     printf("Delete Node Data: %d", bt->data);
-    free(bt)
+    free(bt);
 }

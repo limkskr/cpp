@@ -1,4 +1,4 @@
-#include <string.h>
+/*#include <string.h>
 #include <stdlib.h>
 #include "InfixToPostfix.h"
 #include "PostCalculater.h"
@@ -16,4 +16,4 @@ int EvalInfixExp(char exp[])
 
     free(expcpy);
     return ret;
-}
+}*/

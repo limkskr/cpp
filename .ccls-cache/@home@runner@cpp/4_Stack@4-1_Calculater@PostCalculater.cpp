@@ -1,4 +1,4 @@
-#include "PostCalculater.h"
+/*#include "PostCalculater.h"
 #include "ListBaseStack.h"
 #include <ctype.h>
 #include <string.h>
@@ -42,4 +42,4 @@ int EvalRPNExp(char exp[])
         }
     }
     return SPop(&stack);
-}
+}*/
