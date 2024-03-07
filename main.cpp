@@ -1,10 +1,10 @@
 #include <iostream>
 #include "UsefulHeap.h"
-#include <string.h>
+#include <string>
 
-int DataPriorityComp(char * str1, char * str2)    //우선순위 비교함수
+int DataPriorityComp(std::string str1, std::string str2)    //우선순위 비교함수
 {
-    return strlen(str1) - strlen(str2);
+    return str1.length() - str2.length();
 }
 
 int main(void)
@@ -17,7 +17,7 @@ int main(void)
     HInsert(&heap, "Priority Queue");
 
     while(!HIsEmpty(&heap))
-        printf("%s \n", HDelete(&heap));
+        printf("%s \n", HDelete(&heap).c_str());
 
     return 0;
 }
