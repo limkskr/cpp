@@ -1,5 +1,5 @@
 #include <iostream>
-
+//선택정렬 시간복잡도: n^2
 void SelectionSort(int arr[], int n)
 {
     int i,j;

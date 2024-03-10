@@ -1,6 +1,6 @@
-#include <iostream>
+/*#include <iostream>
 #include "UsefulHeap.h"
-
+// 힙정렬 시간복잡도: nlogn
 int PriComp(int n1, int n2)
 {
     return n2-n1;
@@ -34,4 +34,4 @@ int main(void) //메인
 
     printf("\n");
     return 0;
-}
+}*/

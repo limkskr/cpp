@@ -1,5 +1,5 @@
 #include <iostream>
-
+//삽입정렬 시간복잡도: n^2
 void InsertionSort(int arr[], int n)
 {
     int i,j;

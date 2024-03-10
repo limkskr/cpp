@@ -1,5 +1,5 @@
 #include <iostream>
-
+// 버블정렬 시간복잡도: n^2
 void BubbleSort(int arr[], int n)
 {
     int i, j;
