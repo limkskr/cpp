@@ -10,13 +10,13 @@ void Swap(int arr[], int idx1, int idx2)
 int SelectPivot(int arr[], int left, int right)
 {
     int sample[3] = {left, (left+right)/2, right};
-    
+
     if(arr[sample[0]] > arr[sample[1]])
         Swap(sample,0,1);
-    if(arr[sample[0]] > arr[sample[2]])
-        Swap(sample,0,2);
     if(arr[sample[1]] > arr[sample[2]])
         Swap(sample,1,2);
+    if(arr[sample[0]] > arr[sample[2]])
+        Swap(sample,0,2);
     return sample[1];
 }
 
@@ -24,10 +24,10 @@ int Partition(int arr[], int left, int right)
 {
     int pIdx = SelectPivot(arr, left, right);
     int pivot = arr[pIdx];
-    
+
     int low = left+1;
     int high = right;
-    
+
     Swap(arr, left, pIdx);
     printf("피벗: %d \n", pivot);
     while(low <= high)
@@ -56,17 +56,14 @@ void QuickSort(int arr[], int left, int right)
     }
 }
 
-
-
-
-int main(void) //메인
+int QMain(void) //메인
 {
     //int arr[7] = {3, 2, 4, 1, 7, 6, 5};
     //int arr[3] = {3, 3, 3};
     int arr[15] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
     int len = sizeof(arr)/sizeof(int);
     int i;
-    QuickSort(arr, 0, sizeof(arr)/sizeof(int)-1);
+    QuickSort(arr, 0, len-1);
 
     for(i=0; i<len; i++)
         printf("%d ", arr[i]);

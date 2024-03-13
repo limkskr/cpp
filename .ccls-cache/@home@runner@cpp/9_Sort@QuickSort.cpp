@@ -56,7 +56,7 @@ void QuickSort(int arr[], int left, int right)
     }
 }
 
-int main(void) //메인
+int QMain(void) //메인
 {
     //int arr[7] = {3, 2, 4, 1, 7, 6, 5};
     //int arr[3] = {3, 3, 3};

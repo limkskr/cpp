@@ -22,7 +22,7 @@ int BSearch(int arr[], int len, int target){
     return -1;
 }
 // 2. 재귀
-int BSerchRecur(int d[], int first, int last, int target)
+int BSearchRecur(int d[], int first, int last, int target)
 {
     int mid;
 
@@ -33,7 +33,7 @@ int BSerchRecur(int d[], int first, int last, int target)
     if(d[mid] == target)
         return mid;
     else if(target < d[mid])
-        return BSerchRecur(d,first,mid-1,target);
+        return BSearchRecur(d,first,mid-1,target);
     else
-        return BSerchRecur(d,mid+1,last,target);
+        return BSearchRecur(d,mid+1,last,target);
 }
