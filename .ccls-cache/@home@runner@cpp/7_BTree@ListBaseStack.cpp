@@ -1,3 +1,4 @@
+/*
 #include "ListBaseStack.h"
 #include <iostream>
 
@@ -51,3 +52,4 @@ Data SPeek(Stack*pstack)
     }
     return pstack->head->data;
 }
+*/

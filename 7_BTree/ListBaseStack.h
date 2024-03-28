@@ -1,3 +1,4 @@
+/*
 #ifndef __LB_STACK_H__
 #define __LB_STACK_H__
 #include "BinaryTree.h"
@@ -26,3 +27,4 @@ Data SPop(Stack *pstack);
 Data SPeek(Stack *pstack);
 
 #endif
+*/

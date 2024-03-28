@@ -1,3 +1,4 @@
+/*
 #ifndef __EXPRESSION__
 #define __EXPRESSION__
 //수식트리
@@ -11,3 +12,4 @@ void ShowInfixTypeExp(BTNode*bt);      //중위 표기법 기반 출력
 void ShowPostfixTypeExp(BTNode*bt);    //후위 표기법 기반 출력
 
 #endif
+*/

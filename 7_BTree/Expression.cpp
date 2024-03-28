@@ -1,3 +1,4 @@
+/*
 #include "Expression.h"
 #include "ListBaseStack.h"
 #include <iostream>
@@ -87,3 +88,4 @@ void ShowPostfixTypeExp(BTNode*bt)    //후위 표기법 기반 출력
 {
     PostorderTraverse(bt, ShowNodeData);
 }
+*/

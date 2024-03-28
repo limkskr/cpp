@@ -25,9 +25,20 @@ void MakeRightSubTree(BTNode* main, BTNode* sub);
 
 typedef void (*VisitFuncPtr)(BTData data);
 
-void InorderTraverse(BTNode*bt, VisitFuncPtr action);     //중간탐색
-void PreorderTraverse(BTNode*bt, VisitFuncPtr action);    //전위탐색
-void PostorderTraverse(BTNode*bt, VisitFuncPtr action);   //후위탐색
+//중간탐색
+void InorderTraverse(BTNode*bt, VisitFuncPtr action);
+//전위탐색
+void PreorderTraverse(BTNode*bt, VisitFuncPtr action);
+//후위탐색
+void PostorderTraverse(BTNode*bt, VisitFuncPtr action);
 
-void DeleteTree(BTNode*bt); //해당 트리 전체삭제
+//해당 트리 전체삭제
+void DeleteTree(BTNode*bt); 
+
+//이진탐색트리 사용 함수
+BTNode * RemoveLeftSubTree(BTNode*bt);
+BTNode * RemoveRightSubTree(BTNode*bt);
+void ChangeLeftSubTree(BTNode*bt, BTNode*sub);
+void ChangeRightSubTree(BTNode*bt, BTNode*sub);
+
 #endif
