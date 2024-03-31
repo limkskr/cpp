@@ -1,3 +1,4 @@
+/*
 #ifndef __SLOT_H__
 #define __SLOT_H__
 
@@ -16,3 +17,4 @@ typedef struct _solt
 } Slot;
 
 #endif
+*/

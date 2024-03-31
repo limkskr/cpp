@@ -1,3 +1,4 @@
+/*
 #include "Table.h"
 #include "Slot.h"
 #include <iostream>
@@ -49,3 +50,4 @@ Value TableSearch(Table * pt, Key k)
     else
         return (pt->tbl[hv]).value;
 }
+*/

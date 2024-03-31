@@ -1,3 +1,4 @@
+/*
 #ifndef __D_LINKED_LIST_H__
 #define __D_LINKED_LIST_H__
 
@@ -35,3 +36,4 @@ int LCount(List*plist);
 void SetSortRule(List*plist, int(*comp)(LData d1, LData d2));
 
 #endif
+*/

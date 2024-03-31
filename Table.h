@@ -1,3 +1,4 @@
+/*
 #ifndef __TABLE_H__
 #define __TABLE_H__
 
@@ -26,3 +27,4 @@ Value TableDelete(Table * pt, Key k);
 Value TableSearch(Table * pt, Key k);
 
 #endif
+*/
