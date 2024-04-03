@@ -12,7 +12,7 @@ int GetHashValue(int empNum)
     return empNum%100;
 }
 
-int Main1(void)
+int Main2(void)
 {
     EmpInfo empInfoArr[1000];
     EmpInfo emp1 = {20120003, 42};

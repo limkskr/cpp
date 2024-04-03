@@ -1,3 +1,4 @@
+/*
 #include "Table2.h"
 #include "Slot2.h"
 #include "DLinkedList2.h"
@@ -79,3 +80,4 @@ Value TableSearch(Table * pt, Key k)
     }
     return NULL;
 }
+*/

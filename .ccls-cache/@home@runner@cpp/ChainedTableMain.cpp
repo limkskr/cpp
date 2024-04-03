@@ -7,7 +7,7 @@ int MyHashFunc(int k)
     return k % 100;
 }
 
-int main(void)
+int Main(void)
 {
     Table myTbl;
     Person * np;

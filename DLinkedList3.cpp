@@ -1,4 +1,4 @@
-#include "DLinkedList2.h"
+#include "DLinkedList3.h"
 #include <iostream>
 
 // 리스트 초기화

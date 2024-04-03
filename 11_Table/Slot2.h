@@ -1,3 +1,4 @@
+/*
 //닫힌 어드레스 방법 적용시 (체이닝)
 
 #ifndef __SLOT2_H__
@@ -15,3 +16,4 @@ typedef struct _solt
 } Slot;
 
 #endif
+*/

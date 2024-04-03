@@ -1,14 +1,8 @@
 /*
-1. 슬롯 자체를 노드로 = Slot에 next 삽입
-2. 노드와 슬롯 구분, 노드에 슬롯 주솟값 저장
-3. 슬롯을 노드의 데이터로 저장
-*/
+#ifndef __TABLE_H__
+#define __TABLE_H__
 
-#ifndef __TABLE2_H__
-#define __TABLE2_H__
-
-#include "Slot2.h"
-#include "DLinkedList2.h"
+#include "Slot.h"
 
 #define MAX_TBL 100
 
@@ -16,7 +10,7 @@ typedef int (*HashFunc)(Key k);
 
 typedef struct _table
 {
-    List tbl[MAX_TBL];
+    Slot tbl[MAX_TBL];
     HashFunc hf;
 } Table;
 
@@ -33,3 +27,4 @@ Value TableDelete(Table * pt, Key k);
 Value TableSearch(Table * pt, Key k);
 
 #endif
+*/
