@@ -1,6 +1,8 @@
+/*
 #include "ALGraph.h"
-#include "DLinkedList3.h"
-#include "ArrayBaseStack.h"
+#include "./3_LinkedList/DLinkedList.h"
+#include "./4_Stack/ArrayBaseStack.h"
+#include "./5_Queue/CircularQueue.h"
 #include <iostream>
 #include <string.h>
 
@@ -79,7 +81,7 @@ int VisitVertex(ALGraph * pg, int visitV)
 {
     if(pg->visitInfo[visitV] == 0)
     {
-        pg->visitInfo[visitV] = !;
+        pg->visitInfo[visitV] = 1;
         printf("%c ", visitV + 65);
         return TRUE;
     }
@@ -87,7 +89,7 @@ int VisitVertex(ALGraph * pg, int visitV)
 }
 
 //DFS기반 정점출력
-void DFSShowGraphVertex(ALGraph * pg, int startV)
+void DFShowGraphVertex(ALGraph * pg, int startV)
 {
     Stack stack;
     int visitV = startV;
@@ -98,8 +100,68 @@ void DFSShowGraphVertex(ALGraph * pg, int startV)
     SPush(&stack, visitV);
 
     //여기부터 첫 정점과 연결된 정점에 방문시도 반복문 만들기
-    
+    while(LFirst(&(pg->adjList[visitV]), &nextV) == TRUE)
+    {
+        int visitFlag = FALSE;
+
+        if(VisitVertex(pg, nextV) == TRUE)
+        {
+            SPush(&stack, visitV);
+            visitV = nextV;
+            visitFlag = TRUE;
+        }
+        else
+        {
+            while(LNext(&(pg->adjList[visitV]), &nextV) == TRUE)
+            {
+                if(VisitVertex(pg, nextV) == TRUE)
+                {
+                    SPush(&stack, visitV);
+                    visitV = nextV;
+                    visitFlag = TRUE;
+                    break;
+                }
+            }
+        }
+
+        if(visitFlag == FALSE)    //추가로 방문한 정점이 없다면
+        {
+            if(SIsEmpty(&stack) == TRUE)
+                break;
+            else
+                visitV = SPop(&stack);
+        }
+    }
+
+    memset(pg->visitInfo, 0, sizeof(int)*pg->numV);
 }
 
+void BFShowGraphVertex(ALGraph * pg, int startV)
+{
+    Queue queue;
+    int visitV = startV;
+    int nextV;
 
+    QueueInit(&queue);
 
+    VisitVertex(pg, visitV);
+
+    while(LFirst(&(pg->adjList[visitV]), &nextV))
+    {
+        if(VisitVertex(pg, nextV) == TRUE)
+            Enqueue(&queue, nextV);
+        
+        while(LNext(&(pg->adjList[visitV]), &nextV))
+        {
+            if(VisitVertex(pg, nextV) == TRUE)
+                Enqueue(&queue, nextV);
+        }
+
+        if(QIsEmpty(&queue) == TRUE)
+            break;
+        else
+            visitV = Dequeue(&queue);
+    }
+    memset(pg->visitInfo, 0, sizeof(int)*pg->numV);
+}
+*/

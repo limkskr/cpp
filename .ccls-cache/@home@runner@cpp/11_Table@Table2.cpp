@@ -1,7 +1,7 @@
 /*
 #include "Table2.h"
 #include "Slot2.h"
-#include "DLinkedList2.h"
+#include "./../3_LinkedList/DLinkedList.h"
 #include <iostream>
 
 //테이블 초기화

@@ -3,7 +3,7 @@
 
 //유일값을 가진 키 활용
 
-#include "BinaryTree.h"
+#include "./../7_BTree/BinaryTree.h"
 
 typedef BTData BSTData;
 

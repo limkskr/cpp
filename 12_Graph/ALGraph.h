@@ -1,7 +1,8 @@
+/*
 #ifndef __AL_GRAPH_H__
 #define __AL_GRAPH_H__
 
-#include "DLinkedList3.h"
+#include "./3_LinkedList/DLinkedList.h"
 
 enum {A, B, C, D, E, F, G, H, I, J};
 
@@ -26,6 +27,10 @@ void AddEdge(ALGraph * pg, int fromV, int toV);
 void ShowGraphEdgeInfo(ALGraph * pg);
 
 //DFS
-void DFSShowGraphVertex(ALGraph * pg, int startV);
+void DFShowGraphVertex(ALGraph * pg, int startV);
+
+//BFS
+void BFShowGraphVertex(ALGraph * pg, int startV);
 
 #endif
+*/

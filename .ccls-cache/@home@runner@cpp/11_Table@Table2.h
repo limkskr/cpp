@@ -7,7 +7,7 @@
 #define __TABLE2_H__
 
 #include "Slot2.h"
-#include "DLinkedList2.h"
+#include "./../3_LinkedList/DLinkedList2.h"
 
 #define MAX_TBL 100
 

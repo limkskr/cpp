@@ -1,5 +1,6 @@
-/*#include <iostream>
-#include "UsefulHeap.h"
+/*
+#include <iostream>
+#include "./../8_Heap/UsefulHeap.h"
 // 힙정렬 시간복잡도: nlogn
 int PriComp(int n1, int n2)
 {
@@ -21,7 +22,7 @@ void HeapSort(int arr[], int n, PriorityComp pc)
 }
 
 
-int main(void) //메인
+int HeapSortMain(void) //메인
 {
     int arr[4] = {3, 4, 2, 1};
     
@@ -34,4 +35,5 @@ int main(void) //메인
 
     printf("\n");
     return 0;
-}*/
+}
+*/

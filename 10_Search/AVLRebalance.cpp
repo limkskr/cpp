@@ -1,4 +1,4 @@
-#include "BinaryTree.h"
+#include "./../7_BTree/BinaryTree.h"
 #include <iostream>
 
 //트리의 높이를 계산하여 반환

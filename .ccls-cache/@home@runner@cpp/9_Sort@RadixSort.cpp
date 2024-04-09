@@ -1,8 +1,7 @@
-/*
 // 기수 = 데이터를 이루는 기본 요소 ex) 2진수 -> 0,1 10진수 -> 0,1,2,3,4,5,6,7,8,9
 // 종류: LSD = 가장 덜 중요한 것 부터 = 작은 자릿수 부터, MSD = 가장 중요한 것 부터 = 큰 자릿수 부터 
 #include <iostream>
-#include "ListBaseQueue.h"
+#include "./../5_Queue/ListBaseQueue.h"
 
 #define BUKET_NUM    10
 
@@ -52,4 +51,4 @@ int RMain(void) //메인
         printf("%d ", arr[i]);
 
     return 0;
-} */
+} 
